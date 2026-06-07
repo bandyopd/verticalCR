@@ -1,0 +1,27 @@
+Package: verticaltry
+Type: Package
+Title: Vertical Competing Risks Models with Thresholds and Frailty
+Version: 1.1.0
+Date: 2026-06-03
+Authors@R:
+    person("Bing", "Wang",
+           email = "bingwang@ahu.edu.cn",
+           role = c("aut", "cre"))
+Description: Fits frailty-assisted vertical competing risks models with
+    threshold effects using smoothed hierarchical likelihood and adjusted
+    profile likelihood calculations. The package includes two-cause model
+    fitting utilities, sum-to-zero frailty contrasts, chunked optimization,
+    cumulative-incidence prediction, parameter summaries, and efficient score
+    threshold-test helpers used in the accompanying manuscript analyses.
+License: GPL (>= 2)
+Encoding: UTF-8
+Imports:
+    Rcpp (>= 1.1.1),
+    stats,
+    splines,
+    survival,
+    nnet
+LinkingTo: Rcpp, RcppArmadillo
+RoxygenNote: 7.3.3
+URL: https://github.com/BingWang-AHU/verticaltry
+BugReports: https://github.com/BingWang-AHU/verticaltry/issues
