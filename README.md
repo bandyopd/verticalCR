@@ -1,6 +1,6 @@
-# verticaltry
+# VerticalCR
 
-`verticaltry` contains the model-estimation code used for the manuscript
+`VerticalCR` contains the model-estimation code used for the manuscript
 analyses of frailty-assisted vertical competing risks models with threshold
 effects.
 
@@ -20,14 +20,14 @@ From GitHub:
 
 ```r
 install.packages("remotes")
-remotes::install_github("BingWang-AHU/verticaltry")
+remotes::install_github("BingWang-AHU/VerticalCR")
 ```
 
 From a source tarball:
 
 ```r
 install.packages(c("Rcpp", "RcppArmadillo", "survival", "splines", "nnet"))
-install.packages("verticaltry_1.1.0.tar.gz", repos = NULL, type = "source")
+install.packages("VerticalCR_1.1.0.tar.gz", repos = NULL, type = "source")
 ```
 
 During development, install directly from the package directory:
@@ -64,7 +64,7 @@ relative-hazard covariates separately. This avoids accidental reuse of the same
 design matrix in both model components.
 
 ```r
-library(verticaltry)
+library(VerticalCR)
 
 fit <- fit_twocause_vertical(
   data = dat,

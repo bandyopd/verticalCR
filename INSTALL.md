@@ -12,9 +12,9 @@ $env:PATH = "D:\App\rtools45\usr\bin;D:\App\rtools45\x86_64-w64-mingw32.static.p
 $env:BINPREF = "D:/App/rtools45/x86_64-w64-mingw32.static.posix/bin/"
 $env:COMPILER_PATH = "D:/App/rtools45/x86_64-w64-mingw32.static.posix/bin"
 
-& "D:\App\R-4.6.0\bin\x64\Rscript.exe" -e "Rcpp::compileAttributes('verticaltry')"
-& "D:\App\R-4.6.0\bin\x64\R.exe" CMD build verticaltry
-& "D:\App\R-4.6.0\bin\x64\R.exe" CMD INSTALL verticaltry_1.1.0.tar.gz
+& "D:\App\R-4.6.0\bin\x64\Rscript.exe" -e "Rcpp::compileAttributes('VerticalCR')"
+& "D:\App\R-4.6.0\bin\x64\R.exe" CMD build VerticalCR
+& "D:\App\R-4.6.0\bin\x64\R.exe" CMD INSTALL VerticalCR_1.1.0.tar.gz
 ```
 
 If `R CMD build` fails at the linking stage with messages such as
@@ -38,7 +38,7 @@ needed for compiling the C++ shared library.
 After changing files in `src/`, regenerate the Rcpp wrappers:
 
 ```r
-Rcpp::compileAttributes("verticaltry")
+Rcpp::compileAttributes("VerticalCR")
 ```
 
 The high-level fitting interface is in `R/model_estimation.R`. The low-level

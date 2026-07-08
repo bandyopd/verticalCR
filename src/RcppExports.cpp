@@ -13,7 +13,7 @@ Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 
 // th_vertical
 List th_vertical(arma::vec xtime, arma::vec Delta, arma::vec D1, arma::vec D2, arma::mat X, arma::mat Z, arma::mat Bt, arma::vec W, arma::mat Q, arma::vec ibeta, arma::vec igamma1, arma::vec igamma2, arma::vec ikappa1, arma::vec ikappa2, arma::vec iU, arma::vec izetah, arma::vec izetal, arma::vec irho, double h1, double h2, double itheta, double lr, int mite, int miter, double eps);
-RcppExport SEXP _verticaltry_th_vertical(SEXP xtimeSEXP, SEXP DeltaSEXP, SEXP D1SEXP, SEXP D2SEXP, SEXP XSEXP, SEXP ZSEXP, SEXP BtSEXP, SEXP WSEXP, SEXP QSEXP, SEXP ibetaSEXP, SEXP igamma1SEXP, SEXP igamma2SEXP, SEXP ikappa1SEXP, SEXP ikappa2SEXP, SEXP iUSEXP, SEXP izetahSEXP, SEXP izetalSEXP, SEXP irhoSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP ithetaSEXP, SEXP lrSEXP, SEXP miteSEXP, SEXP miterSEXP, SEXP epsSEXP) {
+RcppExport SEXP _VerticalCR_th_vertical(SEXP xtimeSEXP, SEXP DeltaSEXP, SEXP D1SEXP, SEXP D2SEXP, SEXP XSEXP, SEXP ZSEXP, SEXP BtSEXP, SEXP WSEXP, SEXP QSEXP, SEXP ibetaSEXP, SEXP igamma1SEXP, SEXP igamma2SEXP, SEXP ikappa1SEXP, SEXP ikappa2SEXP, SEXP iUSEXP, SEXP izetahSEXP, SEXP izetalSEXP, SEXP irhoSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP ithetaSEXP, SEXP lrSEXP, SEXP miteSEXP, SEXP miterSEXP, SEXP epsSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -48,7 +48,7 @@ END_RCPP
 }
 // tw_updateb
 List tw_updateb(arma::vec xtime, arma::vec Delta, arma::mat X, arma::mat Q, arma::vec ibeta, arma::vec iu, arma::vec izetah, arma::vec phih, arma::vec phih2, double lr);
-RcppExport SEXP _verticaltry_tw_updateb(SEXP xtimeSEXP, SEXP DeltaSEXP, SEXP XSEXP, SEXP QSEXP, SEXP ibetaSEXP, SEXP iuSEXP, SEXP izetahSEXP, SEXP phihSEXP, SEXP phih2SEXP, SEXP lrSEXP) {
+RcppExport SEXP _VerticalCR_tw_updateb(SEXP xtimeSEXP, SEXP DeltaSEXP, SEXP XSEXP, SEXP QSEXP, SEXP ibetaSEXP, SEXP iuSEXP, SEXP izetahSEXP, SEXP phihSEXP, SEXP phih2SEXP, SEXP lrSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -68,7 +68,7 @@ END_RCPP
 }
 // tw_updateg
 List tw_updateg(arma::vec Delta, arma::vec D, arma::mat Q, arma::mat ZB, arma::vec iu, arma::vec igammak, arma::vec phil, arma::vec izetal, arma::vec irho, double zeta_lr_pi, double lr);
-RcppExport SEXP _verticaltry_tw_updateg(SEXP DeltaSEXP, SEXP DSEXP, SEXP QSEXP, SEXP ZBSEXP, SEXP iuSEXP, SEXP igammakSEXP, SEXP philSEXP, SEXP izetalSEXP, SEXP irhoSEXP, SEXP zeta_lr_piSEXP, SEXP lrSEXP) {
+RcppExport SEXP _VerticalCR_tw_updateg(SEXP DeltaSEXP, SEXP DSEXP, SEXP QSEXP, SEXP ZBSEXP, SEXP iuSEXP, SEXP igammakSEXP, SEXP philSEXP, SEXP izetalSEXP, SEXP irhoSEXP, SEXP zeta_lr_piSEXP, SEXP lrSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -89,7 +89,7 @@ END_RCPP
 }
 // tw_updateu
 List tw_updateu(arma::vec xtime, arma::vec Delta, arma::vec D, arma::mat X, arma::mat Q, arma::mat ZB, arma::vec ibeta, arma::vec iu, arma::vec igammak, arma::vec irho, double itheta, double lr);
-RcppExport SEXP _verticaltry_tw_updateu(SEXP xtimeSEXP, SEXP DeltaSEXP, SEXP DSEXP, SEXP XSEXP, SEXP QSEXP, SEXP ZBSEXP, SEXP ibetaSEXP, SEXP iuSEXP, SEXP igammakSEXP, SEXP irhoSEXP, SEXP ithetaSEXP, SEXP lrSEXP) {
+RcppExport SEXP _VerticalCR_tw_updateu(SEXP xtimeSEXP, SEXP DeltaSEXP, SEXP DSEXP, SEXP XSEXP, SEXP QSEXP, SEXP ZBSEXP, SEXP ibetaSEXP, SEXP iuSEXP, SEXP igammakSEXP, SEXP irhoSEXP, SEXP ithetaSEXP, SEXP lrSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -111,7 +111,7 @@ END_RCPP
 }
 // tw_verticalite2
 List tw_verticalite2(arma::vec Delta, arma::vec D, arma::vec ZBg, arma::vec qu, arma::vec irho, double lr, int mite, double eps, double rho_bound);
-RcppExport SEXP _verticaltry_tw_verticalite2(SEXP DeltaSEXP, SEXP DSEXP, SEXP ZBgSEXP, SEXP quSEXP, SEXP irhoSEXP, SEXP lrSEXP, SEXP miteSEXP, SEXP epsSEXP, SEXP rho_boundSEXP) {
+RcppExport SEXP _VerticalCR_tw_verticalite2(SEXP DeltaSEXP, SEXP DSEXP, SEXP ZBgSEXP, SEXP quSEXP, SEXP irhoSEXP, SEXP lrSEXP, SEXP miteSEXP, SEXP epsSEXP, SEXP rho_boundSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -130,7 +130,7 @@ END_RCPP
 }
 // tw_verticalite3
 List tw_verticalite3(arma::vec xtime, arma::vec Delta, arma::vec D, arma::mat X, arma::mat ZB, arma::vec qu, arma::mat Q, arma::vec ibeta, arma::vec iU, arma::vec igammak, arma::vec phih, arma::vec phih2, arma::vec phil, arma::vec phil2, arma::mat ZBz, arma::vec irho, double itheta);
-RcppExport SEXP _verticaltry_tw_verticalite3(SEXP xtimeSEXP, SEXP DeltaSEXP, SEXP DSEXP, SEXP XSEXP, SEXP ZBSEXP, SEXP quSEXP, SEXP QSEXP, SEXP ibetaSEXP, SEXP iUSEXP, SEXP igammakSEXP, SEXP phihSEXP, SEXP phih2SEXP, SEXP philSEXP, SEXP phil2SEXP, SEXP ZBzSEXP, SEXP irhoSEXP, SEXP ithetaSEXP) {
+RcppExport SEXP _VerticalCR_tw_verticalite3(SEXP xtimeSEXP, SEXP DeltaSEXP, SEXP DSEXP, SEXP XSEXP, SEXP ZBSEXP, SEXP quSEXP, SEXP QSEXP, SEXP ibetaSEXP, SEXP iUSEXP, SEXP igammakSEXP, SEXP phihSEXP, SEXP phih2SEXP, SEXP philSEXP, SEXP phil2SEXP, SEXP ZBzSEXP, SEXP irhoSEXP, SEXP ithetaSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -157,7 +157,7 @@ END_RCPP
 }
 // tw_vertical
 List tw_vertical(arma::vec xtime, arma::vec Delta, arma::vec D, arma::mat X, arma::mat Z, arma::mat Bt, arma::vec W, arma::mat Q, arma::vec ibeta, arma::vec igamma, arma::vec ikappa, arma::vec iU, arma::vec izetah, arma::vec izetal, arma::vec irho, double h1, double h2, double itheta, double lr, int mite, int miter, double eps, double rho_bound, double zeta_lr_pi);
-RcppExport SEXP _verticaltry_tw_vertical(SEXP xtimeSEXP, SEXP DeltaSEXP, SEXP DSEXP, SEXP XSEXP, SEXP ZSEXP, SEXP BtSEXP, SEXP WSEXP, SEXP QSEXP, SEXP ibetaSEXP, SEXP igammaSEXP, SEXP ikappaSEXP, SEXP iUSEXP, SEXP izetahSEXP, SEXP izetalSEXP, SEXP irhoSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP ithetaSEXP, SEXP lrSEXP, SEXP miteSEXP, SEXP miterSEXP, SEXP epsSEXP, SEXP rho_boundSEXP, SEXP zeta_lr_piSEXP) {
+RcppExport SEXP _VerticalCR_tw_vertical(SEXP xtimeSEXP, SEXP DeltaSEXP, SEXP DSEXP, SEXP XSEXP, SEXP ZSEXP, SEXP BtSEXP, SEXP WSEXP, SEXP QSEXP, SEXP ibetaSEXP, SEXP igammaSEXP, SEXP ikappaSEXP, SEXP iUSEXP, SEXP izetahSEXP, SEXP izetalSEXP, SEXP irhoSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP ithetaSEXP, SEXP lrSEXP, SEXP miteSEXP, SEXP miterSEXP, SEXP epsSEXP, SEXP rho_boundSEXP, SEXP zeta_lr_piSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -191,17 +191,17 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_verticaltry_th_vertical", (DL_FUNC) &_verticaltry_th_vertical, 25},
-    {"_verticaltry_tw_updateb", (DL_FUNC) &_verticaltry_tw_updateb, 10},
-    {"_verticaltry_tw_updateg", (DL_FUNC) &_verticaltry_tw_updateg, 11},
-    {"_verticaltry_tw_updateu", (DL_FUNC) &_verticaltry_tw_updateu, 12},
-    {"_verticaltry_tw_verticalite2", (DL_FUNC) &_verticaltry_tw_verticalite2, 9},
-    {"_verticaltry_tw_verticalite3", (DL_FUNC) &_verticaltry_tw_verticalite3, 17},
-    {"_verticaltry_tw_vertical", (DL_FUNC) &_verticaltry_tw_vertical, 24},
+    {"_VerticalCR_th_vertical", (DL_FUNC) &_VerticalCR_th_vertical, 25},
+    {"_VerticalCR_tw_updateb", (DL_FUNC) &_VerticalCR_tw_updateb, 10},
+    {"_VerticalCR_tw_updateg", (DL_FUNC) &_VerticalCR_tw_updateg, 11},
+    {"_VerticalCR_tw_updateu", (DL_FUNC) &_VerticalCR_tw_updateu, 12},
+    {"_VerticalCR_tw_verticalite2", (DL_FUNC) &_VerticalCR_tw_verticalite2, 9},
+    {"_VerticalCR_tw_verticalite3", (DL_FUNC) &_VerticalCR_tw_verticalite3, 17},
+    {"_VerticalCR_tw_vertical", (DL_FUNC) &_VerticalCR_tw_vertical, 24},
     {NULL, NULL, 0}
 };
 
-RcppExport void R_init_verticaltry(DllInfo *dll) {
+RcppExport void R_init_VerticalCR(DllInfo *dll) {
     R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
     R_useDynamicSymbols(dll, FALSE);
 }

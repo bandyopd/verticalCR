@@ -33,5 +33,5 @@
 #'
 #' @examples
 th_vertical <- function(xtime, Delta, D1, D2, X, Z, Bt, W, Q, ibeta, igamma1, igamma2, ikappa1, ikappa2, iU, izetah, izetal, irho, h1, h2, itheta, lr = 1, mite = 20L, miter = 20L, eps = 1E-3) {
-  .Call(`_verticaltry_th_vertical`, xtime, Delta, D1, D2, X, Z, Bt, W, Q, ibeta, igamma1, igamma2, ikappa1, ikappa2, iU, izetah, izetal, irho, h1, h2, itheta, lr, mite, miter, eps)
+  .Call(`_VerticalCR_th_vertical`, xtime, Delta, D1, D2, X, Z, Bt, W, Q, ibeta, igamma1, igamma2, ikappa1, ikappa2, iU, izetah, izetal, irho, h1, h2, itheta, lr, mite, miter, eps)
 }

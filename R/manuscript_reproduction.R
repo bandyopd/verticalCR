@@ -364,7 +364,7 @@ manuscript_run_table_setting <- function(R = 500L,
   reps <- if (workers > 1L) {
     cl <- parallel::makeCluster(workers)
     on.exit(parallel::stopCluster(cl), add = TRUE)
-    root <- Sys.getenv("VERTICALTRY_PROJECT_ROOT", unset = "")
+    root <- Sys.getenv("VerticalCR_PROJECT_ROOT", unset = "")
     parallel::clusterExport(cl, varlist = c("root"), envir = environment())
     parallel::clusterEvalQ(cl, {
       suppressPackageStartupMessages({
@@ -374,29 +374,29 @@ manuscript_run_table_setting <- function(R = 500L,
         library(splines)
       })
       if (nzchar(root)) {
-        dll <- file.path(root, "verticaltry", "src", "verticaltry.dll")
-        if (file.exists(dll) && !"verticaltry" %in% names(getLoadedDLLs())) {
+        dll <- file.path(root, "VerticalCR", "src", "VerticalCR.dll")
+        if (file.exists(dll) && !"VerticalCR" %in% names(getLoadedDLLs())) {
           dyn.load(dll)
         }
-        source(file.path(root, "verticaltry", "R", "RcppExports.R"),
+        source(file.path(root, "VerticalCR", "R", "RcppExports.R"),
                local = globalenv())
-        source(file.path(root, "verticaltry", "R", "model_estimation.R"),
+        source(file.path(root, "VerticalCR", "R", "model_estimation.R"),
                local = globalenv())
-        source(file.path(root, "verticaltry", "R", "manuscript_reproduction.R"),
+        source(file.path(root, "VerticalCR", "R", "manuscript_reproduction.R"),
                local = globalenv())
         assign("tw_vertical",
                function(xtime, Delta, D, X, Z, Bt, W, Q, ibeta, igamma,
                         ikappa, iU, izetah, izetal, irho, h1, h2, itheta,
                         lr = 1, mite = 20L, miter = 20L, eps = 1E-3,
                         rho_bound = 1.0, zeta_lr_pi = 1.0) {
-                 .Call("_verticaltry_tw_vertical", xtime, Delta, D, X, Z,
+                 .Call("_VerticalCR_tw_vertical", xtime, Delta, D, X, Z,
                        Bt, W, Q, ibeta, igamma, ikappa, iU, izetah,
                        izetal, irho, h1, h2, itheta, lr, mite, miter,
-                       eps, rho_bound, zeta_lr_pi, PACKAGE = "verticaltry")
+                       eps, rho_bound, zeta_lr_pi, PACKAGE = "VerticalCR")
                },
                envir = globalenv())
       } else {
-        library(verticaltry)
+        library(VerticalCR)
       }
       NULL
     })

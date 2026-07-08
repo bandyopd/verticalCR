@@ -2,30 +2,30 @@
 # Generator token: 10BE3573-1514-4C36-9D1C-5A225CD40393
 
 th_vertical <- function(xtime, Delta, D1, D2, X, Z, Bt, W, Q, ibeta, igamma1, igamma2, ikappa1, ikappa2, iU, izetah, izetal, irho, h1, h2, itheta, lr = 1, mite = 20L, miter = 20L, eps = 1E-3) {
-    .Call(`_verticaltry_th_vertical`, xtime, Delta, D1, D2, X, Z, Bt, W, Q, ibeta, igamma1, igamma2, ikappa1, ikappa2, iU, izetah, izetal, irho, h1, h2, itheta, lr, mite, miter, eps)
+    .Call(`_VerticalCR_th_vertical`, xtime, Delta, D1, D2, X, Z, Bt, W, Q, ibeta, igamma1, igamma2, ikappa1, ikappa2, iU, izetah, izetal, irho, h1, h2, itheta, lr, mite, miter, eps)
 }
 
 tw_updateb <- function(xtime, Delta, X, Q, ibeta, iu, izetah, phih, phih2, lr) {
-    .Call(`_verticaltry_tw_updateb`, xtime, Delta, X, Q, ibeta, iu, izetah, phih, phih2, lr)
+    .Call(`_VerticalCR_tw_updateb`, xtime, Delta, X, Q, ibeta, iu, izetah, phih, phih2, lr)
 }
 
 tw_updateg <- function(Delta, D, Q, ZB, iu, igammak, phil, izetal, irho, zeta_lr_pi, lr) {
-    .Call(`_verticaltry_tw_updateg`, Delta, D, Q, ZB, iu, igammak, phil, izetal, irho, zeta_lr_pi, lr)
+    .Call(`_VerticalCR_tw_updateg`, Delta, D, Q, ZB, iu, igammak, phil, izetal, irho, zeta_lr_pi, lr)
 }
 
 tw_updateu <- function(xtime, Delta, D, X, Q, ZB, ibeta, iu, igammak, irho, itheta, lr) {
-    .Call(`_verticaltry_tw_updateu`, xtime, Delta, D, X, Q, ZB, ibeta, iu, igammak, irho, itheta, lr)
+    .Call(`_VerticalCR_tw_updateu`, xtime, Delta, D, X, Q, ZB, ibeta, iu, igammak, irho, itheta, lr)
 }
 
 tw_verticalite2 <- function(Delta, D, ZBg, qu, irho, lr, mite, eps, rho_bound) {
-    .Call(`_verticaltry_tw_verticalite2`, Delta, D, ZBg, qu, irho, lr, mite, eps, rho_bound)
+    .Call(`_VerticalCR_tw_verticalite2`, Delta, D, ZBg, qu, irho, lr, mite, eps, rho_bound)
 }
 
 tw_verticalite3 <- function(xtime, Delta, D, X, ZB, qu, Q, ibeta, iU, igammak, phih, phih2, phil, phil2, ZBz, irho, itheta) {
-    .Call(`_verticaltry_tw_verticalite3`, xtime, Delta, D, X, ZB, qu, Q, ibeta, iU, igammak, phih, phih2, phil, phil2, ZBz, irho, itheta)
+    .Call(`_VerticalCR_tw_verticalite3`, xtime, Delta, D, X, ZB, qu, Q, ibeta, iU, igammak, phih, phih2, phil, phil2, ZBz, irho, itheta)
 }
 
 tw_vertical <- function(xtime, Delta, D, X, Z, Bt, W, Q, ibeta, igamma, ikappa, iU, izetah, izetal, irho, h1, h2, itheta, lr = 1, mite = 20L, miter = 20L, eps = 1E-3, rho_bound = 1.0, zeta_lr_pi = 1.0) {
-    .Call(`_verticaltry_tw_vertical`, xtime, Delta, D, X, Z, Bt, W, Q, ibeta, igamma, ikappa, iU, izetah, izetal, irho, h1, h2, itheta, lr, mite, miter, eps, rho_bound, zeta_lr_pi)
+    .Call(`_VerticalCR_tw_vertical`, xtime, Delta, D, X, Z, Bt, W, Q, ibeta, igamma, ikappa, iU, izetah, izetal, irho, h1, h2, itheta, lr, mite, miter, eps, rho_bound, zeta_lr_pi)
 }
 

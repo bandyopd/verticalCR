@@ -1,4 +1,4 @@
-# GitHub upload checklist for `verticaltry`
+# GitHub upload checklist for `VerticalCR`
 
 This package is intended to accompany the manuscript on frailty-assisted
 vertical competing risks models with threshold effects.
@@ -55,8 +55,8 @@ install.packages(c("Rcpp", "RcppArmadillo", "survival", "splines", "nnet"))
 Then from a shell:
 
 ```sh
-R CMD build verticaltry
-R CMD check verticaltry_1.1.0.tar.gz
+R CMD build VerticalCR
+R CMD check VerticalCR_1.1.0.tar.gz
 ```
 
 On Windows, ensure that Rtools is fully available on the build shell path. The
@@ -81,7 +81,7 @@ used by `R CMD build`.
 ## Minimal smoke test after installation
 
 ```r
-library(verticaltry)
+library(VerticalCR)
 
 set.seed(1)
 dat <- manuscript_simulate_twocause_data(
@@ -110,17 +110,17 @@ extract_twocause_parameters(fit)
 
 ## Upload steps
 
-1. Create an empty GitHub repository named `verticaltry`.
+1. Create an empty GitHub repository named `VerticalCR`.
 2. In the local package directory, set the remote:
 
    ```sh
-   git remote add origin https://github.com/<user-or-org>/verticaltry.git
+   git remote add origin https://github.com/<user-or-org>/VerticalCR.git
    ```
 
    If an origin already exists, update it:
 
    ```sh
-   git remote set-url origin https://github.com/<user-or-org>/verticaltry.git
+   git remote set-url origin https://github.com/<user-or-org>/VerticalCR.git
    ```
 
 3. Commit the package files:
@@ -128,7 +128,7 @@ extract_twocause_parameters(fit)
    ```sh
    git add DESCRIPTION NAMESPACE README.md NEWS.md INSTALL.md GITHUB_UPLOAD.md \
        .Rbuildignore .gitignore R src man
-   git commit -m "Prepare verticaltry package for manuscript release"
+   git commit -m "Prepare VerticalCR package for manuscript release"
    ```
 
 4. Push:

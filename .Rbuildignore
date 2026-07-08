@@ -3,7 +3,7 @@
 ^\.git$
 ^\.Rhistory$
 ^Read-and-delete-me$
-^verticaltry_.*\.tar\.gz$
+^VerticalCR_.*\.tar\.gz$
 ^\.\.Rcheck$
 ^src/.*\.o$
 ^src/.*\.dll$

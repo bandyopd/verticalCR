@@ -1,4 +1,4 @@
-Package: verticaltry
+Package: VerticalCR
 Type: Package
 Title: Vertical Competing Risks Models with Thresholds and Frailty
 Version: 1.1.0
@@ -23,5 +23,5 @@ Imports:
     nnet
 LinkingTo: Rcpp, RcppArmadillo
 RoxygenNote: 7.3.3
-URL: https://github.com/BingWang-AHU/verticaltry
-BugReports: https://github.com/BingWang-AHU/verticaltry/issues
+URL: https://github.com/BingWang-AHU/VerticalCR
+BugReports: https://github.com/BingWang-AHU/VerticalCR/issues

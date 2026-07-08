@@ -1,4 +1,4 @@
-useDynLib(verticaltry, .registration=TRUE)
+useDynLib(VerticalCR, .registration=TRUE)
 importFrom(Rcpp, evalCpp)
 importFrom(stats, contr.helmert)
 importFrom(stats, pnorm)
